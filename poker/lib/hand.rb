@@ -27,6 +27,11 @@ class Hand
     end
   end
 
+  def compare_hands(other_hand)
+    first_hand = self.hand_rank
+    second_hand = other_hand.hand_rank
+  end
+
   def hand_rank
     if straight_flush
       [1, highest_value]

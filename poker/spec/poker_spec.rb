@@ -259,6 +259,7 @@ describe "Poker" do
       card4 = Card.new(8, :spades)
       card5 = Card.new(7, :spades)
       hand2.hand = [card1, card2, card3, card4, card5]
+      expect(hand1.compare_hands(hand2)).to eq(:split)
     end
 
     #calculate hand's rank
